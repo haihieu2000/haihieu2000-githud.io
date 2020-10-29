@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.bg-img-base {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* hình nền ngoài */
+.page-wrapper {
+  background-image:url(7301b61e39f9d51c8d893f37a87ab060.jpg);
+  background-size:1550px 715px;
+  padding-top: 100px;
+  min-height: 100vh;
+}
+
+.card-packaging {
+  width: 30%;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  min-height: 500px;
+  box-shadow: 0 0 6px 2px #926c6c;
+}
+
+.card .open {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -7px;
+  transition: .3s;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+}
+
+.card .open:hover {
+  right: -10px;
+  transition: .3s;
+}
+
+.card .open-tail {
+  position: relative;
+  height: 36px;
+  width: 30px;
+  float: left;
+}
+
+.card .open-tail:before {
+  content: '';
+  display: block;
+  border-top: 18px solid #d24242;
+  border-left: 30px solid transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.card .open-tail:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 18px;
+  left: 0;
+  border-top: 18px solid transparent;
+  border-right: 30px solid #d24242;
+}
+
+.card .open-main {
+  display: inline-block;
+  line-height: 36px;
+  background: #d24242;
+  padding: 0 3px 0 0;
+}
+
+.card .open-title {
+  display: inline-block;
+  line-height: 35px;
+  border-top: 1px dashed white;
+  border-bottom: 1px dashed white;
+  padding: 0 15px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.card--first,
+.card--third {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform-origin: left;
+  transition: all .9s;
+  transform-style: preserve-3d;
+  z-index: 2;
+  box-shadow: 2px 0 6px 2px #926c6c;
+}
+
+.card--first {
+  transition-delay: .4s;
+}
+
+.card--third {
+  z-index: 1;
+  transform-origin: right;
+  transition: all .9s;
+  box-shadow: -2px 0 6px 2px #926c6c;
+}
+
+.card-packaging.is-open .card--first {
+  transform: rotateY(180deg);
+  transition: all .9s;
+}
+
+.card-packaging.is-open .card--third {
+  transform: rotateY(180deg);
+  transition: all .9s;
+  transition-delay: .4s;
+}
+
+.card-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  padding: 15px 25px;
+}
+
+.card-wrapper.back {
+  transform: rotateY(180deg);
+}
+
+/* thẻ close */
+.card .close {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -7px;
+  transition: .3s;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+}
+
+.card .close-tail {
+  position: relative;
+  height: 36px;
+  width: 30px;
+  float: right;
+}
+
+.close .close-title {
+  display: inline-block;
+  line-height: 35px;
+  border-top: 1px dashed white;
+  border-bottom: 1px dashed white;
+  padding: 0 15px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;	
+}
+
+.card .close-main {
+  display: inline-block;
+  line-height: 36px;
+  background: #d24242;
+  padding: 0 3px 0 0;
+}
+
+
+.card .close-tail {
+  position: relative;
+  height: 36px;
+  width: 30px;
+  float: left;
+}
+
+.card .close-tail:before {
+  content: '';
+  display: block;
+  border-top: 18px solid #d24242;
+  border-left: 30px solid transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.card .close-tail:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 18px;
+  left: 0;
+  border-top: 18px solid transparent;
+  border-right: 30px solid #d24242;
+}
+
+/* điểm nổi bật tấm thiệp */
+.vr {
+       width:7px;
+	   height:23px;
+       background-color:red;
+       position:absolute;
+       bottom:340px;
+       left:103px;
+}
+
+.line1 {
+        width: 480px;
+        border-bottom: 1px solid red;
+        -webkit-transform:
+			translateY(75px)
+            translateX(35px)
+            rotate(27deg); 
+		position: absolute;
+		left:50px;
+		bottom:305px;
+    }
+.line2 {
+        width: 500px;
+        border-bottom: 1px solid red;
+        -webkit-transform:
+            translateY(-90px)
+            translateX(-20px)
+            rotate(-31deg);
+        position: absolute;
+        bottom:400px;
+        left: 90px;
+    }
